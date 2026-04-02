@@ -1,40 +1,45 @@
 # IonVision  
 
-IonVision is a Python package developed during my internship at the National Quantum Computing Centre (NQCC). It enables automated rendering of energy-level diagrams and generation of pulse-sequence timelines for trapped-ion quantum computing experiments.  
-
-[View the documentation and demo site →](https://ianalaman.github.io/IonVision/)  
-
----
-
-## Features  
-
-- **Energy-Level Diagram Generator**  
-  Generate publication-quality diagrams for arbitrary ionic or atomic level structures. Works with multi-level ions and supports configurable styling (colors, labels, transition strengths, etc.).  
-
-- **Pulse-Sequence Builder**  
-  Construct pulse sequences (laser or microwave pulses) from YAML-based configuration files. Automatically handles timing, level transitions, and supports multiple pulse types.  
+IonVision is a Python package developed by the trapped ion team at the National Quantum Computing Centre (NQCC). It enables automated rendering of energy-level diagrams and generation of pulse-sequence timelines for trapped-ion quantum computing experiments.  
 
 
----
+Cloning and Running the Repository
 
-##  Installation  
+1. Clone the repository
 
-### Linux/Mac
+Clone the repository to your local machine:
 
-```bash
-git clone https://github.com/ianalaman/IonVision.git
-cd IonVision
-python -m venv .venv
-source .venv/bin/activate
+git clone [<repository-url>](https://github.com/stfc/IonVision)
+cd <repository-folder>
+2. Create and activate a virtual environment (recommended)
+python -m venv venv
+source venv/bin/activate
+
+On Windows:
+
+venv\Scripts\activate
+3. Install the required dependencies
 pip install -r requirements.txt
-```
+Viewing the Documentation with MkDocs
 
-### Windows
+This repository uses MkDocs to build and preview the documentation.
 
-```bash
-git clone https://github.com/ianalaman/IonVision.git
-cd IonVision
-python -m venv .venv
-.venv\Scripts\Activate
-pip install -r requirements.txt
-```
+1. Install MkDocs (if not already installed)
+pip install mkdocs
+
+If the project uses a theme such as Material for MkDocs, install it as well:
+
+pip install mkdocs-material
+2. Serve the documentation locally
+
+From the root of the repository, run:
+
+mkdocs serve
+3. View the documentation
+
+Once the server starts, open a browser and go to:
+
+http://127.0.0.1:8000
+
+The site will automatically reload whenever you modify the documentation files.
+---
